@@ -203,3 +203,11 @@
 		background: $bgThumb;
 	}
 }
+
+@mixin line {
+	content: "";
+    display: inline-block;
+    width: 8rem;
+    height: 2px;
+    background-color: $gray-cl;
+}

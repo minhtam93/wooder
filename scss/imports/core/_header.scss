@@ -1,1 +1,63 @@
 // css header
+// .header {
+//     .container-fluid {
+//       position: fixed;
+//       z-index: 1;
+//     }
+//     &__top {
+//       @include mid();
+//       height: var(--height-header);
+//       &-logo {
+//         max-width: 177px;
+//         width: 100%;
+//       }
+//       &-menu {
+//         @include mid();
+//         gap: 70px;
+//         li {
+//           a {
+//             @include text(var(--body15-fs), $primary-font-b, var(--body15-lh),$white-cl, uppercase);
+//           }
+//           &:first-child a{
+//             color: $yellow-cl;
+//           }
+
+//         }
+//       }
+//       &-lang {
+//         font-size: var(--body16-fs);
+//         color: $white-cl;
+//       }
+//     }
+//   }
+
+.header {
+  .container-fluid {
+    position: fixed;
+    z-index: 1;
+  }
+  &__top {
+    @include mid(true);
+    justify-content: space-between;
+    height: var(--height-header);
+    &-logo {
+      max-width: 17.7rem;
+    }
+    &-menu {
+      @include mid(true);
+      gap: 7rem;
+      li {
+        a {
+          @include text(var(--body15-fs), $primary-font-b, var(--body15-lh), $white-cl, uppercase);
+        }
+        &:first-child a {
+          color: $yellow-cl;
+        }
+      }
+    }
+    &-lang {
+      font-size: var(--body16-fs);
+      color: $white-cl;
+    }
+  }
+}

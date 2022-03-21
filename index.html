@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="./dest/style.min.css" />
     <link rel="stylesheet" href="./dest/fonts.css" />
-    </head>
+  </head>
 
   <body class="homepage">
     <div class="wrapper">
@@ -60,11 +60,11 @@
                 <img src="./img/slide-1.jpg" alt="" />
               </div>
               <div class="header__slider-text">
-                <h2 class="heading">wooder</h2>
+                <h2 class="heading --h2">wooder</h2>
                 <div class="button">
                   <a href="">
                     <span>LEARN MORE</span>
-                    <img src="./img/arrow.png" alt="" />
+                    <img class="arrow" src="./img/arrow.png" alt="" />
                   </a>
                 </div>
               </div>
@@ -136,17 +136,21 @@
         </section>
         <section class="products">
           <div class="container">
-            <div class="furniture flex">
-              <div class="furniture__content">
-                <h2 class="furniture__content-heading">furniture</h2>
-                <p class="furniture__content-info">
-                  Wooder utilizes materials otherwise left behind, rendered
-                  useless in their original intent. By creating new pieces made
-                  of reclaimed barnwood
-                </p>
-                <div class="btn-more">
-                  <span>learn more</span>
-                  <img src="./img/arrow.png" alt="" />
+            <div class="furniture display-flex">
+              <div class="furniture__content --content">
+                <article class="furniture__content-text">
+                  <h3 class="heading --h3 line">furniture</h3>
+                  <p class="info --mg-l">
+                    Wooder utilizes materials otherwise left behind, rendered
+                    useless in their original intent. By creating new pieces
+                    made 
+                  </p>
+                </article>
+                <div class="button btn-more --mg-l underline">
+                  <a href=""  class="--black-cl">
+                    <span>learn more</span>
+                    <img src="./img/arrow-brown-cl.png" alt="" />
+                  </a>
                 </div>
               </div>
               <div class="furniture__img">
@@ -154,33 +158,37 @@
               </div>
             </div>
 
-            <div class="decor flex">
-              <div class="furniture__content">
-                <h2 class="furniture__content-heading">Decor</h2>
-                <p class="furniture__content-info">
-                  We make all types of wooden decor as per design given by
-                  Architect,Interior designer, contractor which is suitable your
-                  premises.
-                </p>
-                <div class="btn-more">
-                  <span>learn more</span>
-                  <img src="./img/arrow.png" alt="" />
+            <div class="decor display-flex">
+              <div class="decor__content --content --right">
+                <article class="decor__content-text ">
+                  <h3 class="heading --h3 line">Decor</h3>
+                  <p class="info --mg-r">
+                    We make all types of wooden decor as per design given by
+                    Architect,Interior designer, contractor which is suitable
+                    your premises.
+                  </p>
+                </article>
+                <div class="button btn-more --mg-r underline underline-r">
+                  <a href="" class="--black-cl">
+                    <span>learn more</span>
+                    <img src="./img/arrow-brown-cl.png" alt="" />
+                  </a>
                 </div>
               </div>
-              <div class="furniture__img">
+              <div class="--left">
                 <img src="./img/decor.jpg" alt="" />
               </div>
             </div>
 
             <div class="quality">
               <div class="container">
-                <div class="quality__top">
-                  <h2 class="quality__top-heading">wooder – is quality</h2>
+                <article class="quality__top ">
+                  <h3 class="heading --h3 underline underline-c">wooder – is quality</h3>
                   <p class="quality__top-info">
-                    We create unique design objects made of rare wood, specially
+                    We create unique design objects made of rare wood, specially<br />
                     under the order. Look at the short video about our work.
-                  </p>
-                </div>
+                  </br>
+                </article>
                 <div class="quality__content">
                   <div class="quality-list">
                     <div class="quality-media">
@@ -215,7 +223,7 @@
           </div>
         </section>
         <section class="video">
-          <h2 class="video__heading">we Do the design ∏of any complexity</h2>
+          <h3 class="video__heading">we Do the design of any complexity</h3>
           <div class="video__info">
             This is a team of professionals that make the furniture and wood
             décor high standard. Creating modern designs. Adhering to the global
@@ -236,7 +244,7 @@
                 <img src="./img/about-us.jpg" alt="wooder" />
               </div>
               <div class="about__inner-content">
-                <h2 class="about-heading">About us</h2>
+                <h3 class="about-heading">About us</h3>
                 <div class="about-info">
                   We are a team of professionals in the wood processing and the
                   creation of wooden furniture of the highest class
@@ -251,7 +259,7 @@
         </section>
         <section class="gallery">
           <div class="container">
-            <h2 class="gallery__heading">Gallery</h2>
+            <h3 class="gallery__heading">Gallery</h3>
             <div class="gallery__info">
               We are a team of professionals in the wood processing and the
               creation of wooden furniture of the highest class
@@ -277,7 +285,7 @@
         </section>
         <section class="news">
           <div class="container">
-            <h2 class="news__heading">news</h2>
+            <h3 class="news__heading">news</h3>
             <div class="news__info">
               We are a team of professionals in the wood processing and the
               creation of wooden furniture of the highest class
@@ -287,7 +295,7 @@
                 <div class="news-img">
                   <img src="./img/news-1.jpg" alt="wooder" />
                 </div>
-                <div class="news-title">Where does it come from?</div>
+                <h4 class="news-title">Where does it come from?</h4>
                 <div class="news-desc">
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literatur...
@@ -297,9 +305,9 @@
                 <div class="news-img">
                   <img src="./img/news-2.jpg" alt="wooder" />
                 </div>
-                <div class="news-title">
+                <h4 class="news-title">
                   There are many variations of passages
-                </div>
+                </h4>
                 <div class="news-desc">
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literatur...
@@ -309,9 +317,9 @@
                 <div class="news-img">
                   <img src="./img/news-3.jpg" alt="wooder" />
                 </div>
-                <div class="news-title">
+                <h4 class="news-title">
                   It is a long established fact that a reader
-                </div>
+                </h4>
                 <div class="news-desc">
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literatur...

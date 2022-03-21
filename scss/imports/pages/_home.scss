@@ -1,8 +1,60 @@
 // CSS HOMEPAGE
 // Ví dụ
-.schero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.header__slider {
+    margin-bottom: 9.5rem;
+    &-list {
+        position: relative;
+    }
+    &-text {
+        @include mid();
+        .button {
+            border: 1px solid white;
+            width: 26rem;
+            padding-left: 5rem;
+            padding-right: 4.3rem;
+            margin-left: auto;
+            margin-right: auto;
+            span {
+                padding-right: 1.2rem;
+            }
+        }
+    }
+    .container-fluid {
+        position: absolute;
+        bottom: 3rem;
+        left: 0;
+    }
+}
+
+.furniture {
+    margin-bottom: 10.5rem;
+    .line::before {
+        @include line();
+        margin: 0 20px 12px 0;
+    }
+}
+
+.decor {
+    margin-bottom: 10rem;
+    .line::after {
+        @include line();
+        margin: 0 0 12px 20px;
+    }
+}
+
+.quality {
+    &__top {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    &__content {
+        margin-top: 6.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 7rem;
+    }
+
+    
 }

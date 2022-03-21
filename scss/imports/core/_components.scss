@@ -23,9 +23,9 @@ a {
 .--black-cl {
     color: $black-cl;
 }
-.--blue-cl {
-    color: $blue-cl;
-}
+// .--blue-cl {
+//     color: $blue-cl;
+// }
 
 // css article (nội dung chi tiết bài viết)
 article {
@@ -71,9 +71,9 @@ article {
     p {
         margin: 0 0 1.12rem 0;
     }
-    strong {
-        // font-family: ib; // font bold
-    }
+    // strong {
+    //     // font-family: ib; // font bold
+    // }
     ol,
     ul {
         list-style: initial;
@@ -114,7 +114,72 @@ article {
         line-height: var(--h1-lh);
     }
     &.--h2 {
-        font-size: var(--h2-fs);
-        line-height: var(--h2-lh);
+        @include text(var(--h2-fs), $primary-font-b, var(--h2-lh), $yellow-cl, uppercase);
+        margin-bottom: 5rem;
+        letter-spacing: 0.2em;
+    }
+    &.--h3 {
+        text-transform: uppercase;
+        font-family: $primary-font-b;
+        letter-spacing: 0.07em;
     }
 }
+
+p {
+    color: $gray-cl;
+}
+
+a {
+    @include text(var(--body14-fs), $primary-font-b, var(--body14-lh), $white-cl, uppercase);
+    letter-spacing: 0.2em;
+}
+
+.arrow {
+    width: 3rem;
+}
+
+.display-flex {
+    @include mid(true);
+    justify-content: space-between;
+    .--content {
+        max-width: 41rem;
+        .info {
+            word-break: break-all;
+        }
+    }
+    .--mg-l {
+        margin-left: 10rem;
+    }
+    .--mg-r {
+        margin-right: 10rem;
+    }
+    .--left {
+        order: 0;
+    }
+    .--right {
+        order: 1;
+        text-align: right;
+    }
+}
+
+.underline {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        left: 0;
+        width: 4rem;
+        background: $yellow-cl;
+        bottom: 17px;
+    }
+    &-r:after{
+        left: 51%;
+    }
+    &-c:after{
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
+}
+
