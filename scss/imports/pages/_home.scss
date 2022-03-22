@@ -1,60 +1,145 @@
 // CSS HOMEPAGE
-// Ví dụ
 
-.header__slider {
+.slider {
+  position: relative;
+  &__list {
     margin-bottom: 9.5rem;
-    &-list {
-        position: relative;
-    }
-    &-text {
-        @include mid();
-        .button {
-            border: 1px solid white;
-            width: 26rem;
-            padding-left: 5rem;
-            padding-right: 4.3rem;
-            margin-left: auto;
-            margin-right: auto;
-            span {
-                padding-right: 1.2rem;
-            }
+    height: 100vh;
+    margin-bottom: 9.5rem;
+    overflow: hidden;
+    &-item {
+      .img {
+        img {
+          width: 100%;
+          object-fit: cover;
         }
-    }
-    .container-fluid {
-        position: absolute;
-        bottom: 3rem;
-        left: 0;
-    }
-}
+      }
 
-.furniture {
-    margin-bottom: 10.5rem;
-    .line::before {
-        @include line();
-        margin: 0 20px 12px 0;
+      .text {
+        @include mid();
+        text-align: center;
+        .button {
+          width: 26rem;
+          padding: 2rem 4.3rem;
+          span {
+            padding-right: 1.2rem;
+          }
+        }
+      }
     }
+  }
+  &__right {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+    .container-fluid {
+      @include mid(true);
+      justify-content: space-between;
+    }
+    &-numbers {
+      @include mid(true);
+      .number {
+        font-size: 42px;
+        font-family: $primary-font-b;
+        color: $yellow-cl;
+        @include mid(true);
+        &:before {
+          content: "";
+          width: 40px;
+          height: 4px;
+          display: inline-block;
+          background-color: $yellow-cl;
+          margin-right: 15px;
+        }
+      }
+      // ol {
+      //   // list-style-type: disc;
+      // }
+    }
+    &-scroll {
+      @include mid(true);
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      transform: translateX(-50%);
+      .arrow {
+        width: 6rem;
+        margin-top: 25px;
+        i {
+          img {
+            @include transform(rotate(90deg));
+          }
+        }
+      }
+    }
+    &-ctr {
+      @include mid(true);
+      .button {
+        width: 64px;
+        padding: 8px 20px;
+      }
+      .pre {
+        @include transform(rotate(-180deg));
+      }
+    }
+  }
+}
+.furniture {
+  margin-bottom: 10.5rem;
+  .line::before {
+    @include line();
+    margin: 0 20px 12px 0;
+  }
 }
 
 .decor {
-    margin-bottom: 10rem;
-    .line::after {
-        @include line();
-        margin: 0 0 12px 20px;
-    }
+  margin-bottom: 10rem;
+  .line::after {
+    @include line();
+    margin: 0 0 12px 20px;
+  }
 }
 
 .quality {
-    &__top {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+  &__top {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  &__content {
+    margin: 6.5rem 9rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 7rem;
+    &-list {
+      .media {
+        width: 200px;
+        height: 200px;
+        max-width: 400px;
+        max-height: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        position: relative;
+        > img {
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .play-btn{
+        @include mid();
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $yellow-cl;
+        opacity: .8;
+        img {
+          @include mid();
+        }
+      }
     }
-    &__content {
-        margin-top: 6.5rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 7rem;
-    }
-
-    
+  }
 }

@@ -1,40 +1,10 @@
 // css header
-// .header {
-//     .container-fluid {
-//       position: fixed;
-//       z-index: 1;
-//     }
-//     &__top {
-//       @include mid();
-//       height: var(--height-header);
-//       &-logo {
-//         max-width: 177px;
-//         width: 100%;
-//       }
-//       &-menu {
-//         @include mid();
-//         gap: 70px;
-//         li {
-//           a {
-//             @include text(var(--body15-fs), $primary-font-b, var(--body15-lh),$white-cl, uppercase);
-//           }
-//           &:first-child a{
-//             color: $yellow-cl;
-//           }
-
-//         }
-//       }
-//       &-lang {
-//         font-size: var(--body16-fs);
-//         color: $white-cl;
-//       }
-//     }
-//   }
 
 .header {
   .container-fluid {
     position: fixed;
     z-index: 1;
+    max-width: $container-max-width;
   }
   &__top {
     @include mid(true);
@@ -42,22 +12,88 @@
     height: var(--height-header);
     &-logo {
       max-width: 17.7rem;
+      .hidden {
+        display: none;
+      }
     }
     &-menu {
       @include mid(true);
-      gap: 7rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
       li {
-        a {
-          @include text(var(--body15-fs), $primary-font-b, var(--body15-lh), $white-cl, uppercase);
+        height: 100%;
+        margin-right: 7rem;
+        &:last-child {
+          margin-right: 0;
         }
-        &:first-child a {
-          color: $yellow-cl;
+        a {
+          @include text(
+            var(--body15-fs),
+            $primary-font-b,
+            var(--body15-lh),
+            $white-cl,
+            uppercase
+          );
+          @include mid(true);
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          &:hover {
+            opacity: 0.75;
+            visibility: visible;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            height: 2px;
+            width: 100%;
+            background-color: $white-cl;
+            @include transform(scaleX(0));
+            @include transition(0.3s);
+          }
+          &:hover {
+            &:after {
+              @include transform(scaleX(1));
+              // @include transform-origin(bottom);
+            }
+          }
         }
       }
     }
-    &-lang {
+  }
+  &__lang {
+    height: 100%;
+    @include mid(true);
+    cursor: pointer;
+    &-current {
       font-size: var(--body16-fs);
       color: $white-cl;
+      i {
+        img {
+          width: 11px;
+        }
+      }
+    }
+    &-other {
+      background: white;
+      position: absolute;
+      right: 30px;
+      top: 60px;
+      width: 80px;
+      height: 80px;
+      text-align: right;
+      padding-right: 15px;
+      display: au;
+      height: auto;
+      line-height: 30px;
+      @include visible();
+      &.is-active {
+        @include visible(1);
+      }
     }
   }
 }

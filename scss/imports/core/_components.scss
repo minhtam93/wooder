@@ -115,7 +115,7 @@ article {
     }
     &.--h2 {
         @include text(var(--h2-fs), $primary-font-b, var(--h2-lh), $yellow-cl, uppercase);
-        margin-bottom: 5rem;
+        margin-bottom: 3.5rem;
         letter-spacing: 0.2em;
     }
     &.--h3 {
@@ -142,7 +142,7 @@ a {
     @include mid(true);
     justify-content: space-between;
     .--content {
-        max-width: 41rem;
+        max-width: 38rem;
         .info {
             word-break: break-all;
         }
@@ -183,3 +183,9 @@ a {
     }
 }
 
+.button {
+    border: 1px solid $white-cl;
+    &:hover {
+        background-color: $yellow-cl;
+      }
+}

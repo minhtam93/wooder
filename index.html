@@ -32,6 +32,7 @@
           <div class="header__top">
             <h1 class="header__top-logo">
               <img src="./img/logo.png" alt="" />
+              <h1 class="hidden">wooder</h1>
             </h1>
             <ul class="header__top-menu">
               <li><a href="" class="--current-cl">home</a></li>
@@ -40,26 +41,53 @@
               <li><a href="">gallery</a></li>
               <li><a href="">news</a></li>
             </ul>
-            <div class="header__top-lang">
-              <div class="lang-en">
+            <div class="header__lang">
+              <div class="header__lang-current">
                 <span class="lang-en">EN</span>
+                <i><img src="./img/arrow-down.png" alt=""></i>
               </div>
-              <div class="lang-other" style="display: none">
-                <span class="vn">VN</span>
-                <span class="vn">JP</span>
-              </div>
+              <!-- <div class="header__lang-other">
+                <span class="header__lang-item">VN</span>
+                <span class="header__lang-item">JP</span>
+              </div> -->
             </div>
+            <!-- <div class="hambuger">
+              <span></span>
+            </div>
+            <nav class="nav">
+              <ul class="header__top-menu">
+                <li><a href="" class="--current-cl">home</a></li>
+                <li><a href="">products</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">gallery</a></li>
+                <li><a href="">news</a></li>
+              </ul>
+            </nav> -->
           </div>
         </div>
       </header>
       <main class="mainwrapper">
-        <section class="header__slider">
-          <div class="header__slider-list">
-            <div class="header__slider-item slider-1">
-              <div class="header__slider-img">
+        <section class="slider">
+          <div class="slider__list">
+            <div class="slider__list-item slider-1">
+              <div class="img">
                 <img src="./img/slide-1.jpg" alt="" />
               </div>
-              <div class="header__slider-text">
+              <div class="text">
+                <h2 class="heading --h2">wooder</h2>
+               
+                  <a href="" class="button">
+                    <span>LEARN MORE</span>
+                    <i><img class="arrow" src="./img/arrow.png" alt="" /></i>
+                  </a>
+              
+              </div>
+            </div>
+            <!-- <div class="slider__list-item slider-2">
+              <div class="img">
+                <img src="./img/slide-2.jpg" alt="" />
+              </div>
+              <div class="text">
                 <h2 class="heading --h2">wooder</h2>
                 <div class="button">
                   <a href="">
@@ -69,70 +97,51 @@
                 </div>
               </div>
             </div>
-            <div class="header__slider-item slider-2" style="display: none">
-              <div class="header__slider-img">
-                <img src="./img/slide2.jpg" alt="" />
+            <div class="slider__list-item slider-3">
+              <div class="img">
+                <img src="./img/slide-3.jpg" alt="" />
               </div>
-              <div class="header__slider-text">
-                <h2 class="heading">wooder</h2>
+              <div class="text">
+                <h2 class="heading --h2">wooder</h2>
                 <div class="button">
                   <a href="">
                     <span>LEARN MORE</span>
-                    <img src="./img/arrow.png" alt="" />
+                    <img class="arrow" src="./img/arrow.png" alt="" />
                   </a>
                 </div>
               </div>
-            </div>
-            <div class="header__slider-item slider-3" style="display: none">
-              <div class="header__slider-img">
-                <img src="./img/slide3.jpg" alt="" />
+            </div> -->
+          </div>
+          <div class="slider__right">
+            <div class="container-fluid">
+              <div class="slider__right-numbers">
+                <div class="number">01</div>
+                  <ol  class="dots">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ol>
               </div>
-              <div class="header__slider-text">
-                <h2 class="heading">wooder</h2>
-                <div class="button">
-                  <a href="">
-                    <span>LEARN MORE</span>
-                    <img src="./img/arrow.png" alt="" />
-                  </a>
+              <div class="slider__right-scroll">
+                <div class="mouse">
+                  <img src="./img/mouse61.png" alt="" />
+                </div>
+                <div class="arrow">
+                  <i><img src="./img/arrow.png" alt="" /></i>
+                </div>
+              </div>
+              <div class="slider__right-ctr">
+                <div class="arrow button pre">
+                  <i><img src="./img/arrow.png" alt="" /></i>
+                </div>
+                <div class="arrow button next">
+                  <i><img src="./img/arrow.png" alt="" /></i>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container-fluid">
-            <div class="header__slider-number">
-              <span>01</span>
-              <div class="dots">
-                <div class="slider-dot dot-1">
-                  <img src="./img/dot.png" alt="" />
-                </div>
-                <div class="dot dot-2">
-                  <img src="./img/dot.png" alt="" />
-                </div>
-                <div class="dot slider-dot-3">
-                  <img src="./img/dot.png" alt="" />
-                </div>
-                <div class="dot dot-4">
-                  <img src="./img/dot.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="header__slider-scroll">
-              <div class="slider-mouse">
-                <img src="./img/mouse61.png" alt="" />
-              </div>
-              <div class="slider-arrow">
-                <img src="./img/arrow.png" alt="" />
-              </div>
-            </div>
-            <div class="header__slider-l">
-              <div class="arrow pre">
-                <img src="./img/arrow.png" alt="" />
-              </div>
-              <div class="arrow next">
-                <img src="./img/arrow.png" alt="" />
-              </div>
-            </div>
-          </div>
+         
         </section>
         <section class="products">
           <div class="container">
@@ -146,7 +155,7 @@
                     made 
                   </p>
                 </article>
-                <div class="button btn-more --mg-l underline">
+                <div class="btn-more --mg-l underline">
                   <a href=""  class="--black-cl">
                     <span>learn more</span>
                     <img src="./img/arrow-brown-cl.png" alt="" />
@@ -168,7 +177,7 @@
                     your premises.
                   </p>
                 </article>
-                <div class="button btn-more --mg-r underline underline-r">
+                <div class="btn-more --mg-r underline underline-r">
                   <a href="" class="--black-cl">
                     <span>learn more</span>
                     <img src="./img/arrow-brown-cl.png" alt="" />
@@ -190,32 +199,32 @@
                   </br>
                 </article>
                 <div class="quality__content">
-                  <div class="quality-list">
-                    <div class="quality-media">
+                  <div class="quality__content-list">
+                    <div class="media">
                       <img src="./img/quality-1.jpg" alt="" />
-                      <div class="quality-play">
+                      <div class="play-btn">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
-                    <div class="quality-desc">Innovative Design</div>
+                    <div class="desc">Innovative Design</div>
                   </div>
-                  <div class="quality-list">
-                    <div class="quality-media">
+                  <div class="quality__content-list">
+                    <div class="media">
                       <img src="./img/quality-2.jpg" alt="" />
-                      <div class="quality-play">
+                      <div class="play-btn">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
-                    <div class="quality-desc">Innovative Design</div>
+                    <div class="desc">Innovative Design</div>
                   </div>
-                  <div class="quality-list">
-                    <div class="quality-media">
+                  <div class="quality__content-list">
+                    <div class="media">
                       <img src="./img/quality-3.jpg" alt="" />
-                      <div class="quality-play">
+                      <div class="play-btn">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
-                    <div class="quality-desc">Innovative Design</div>
+                    <div class="desc">Innovative Design</div>
                   </div>
                 </div>
               </div>
