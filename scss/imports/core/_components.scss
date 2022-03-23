@@ -167,14 +167,14 @@ a {
     &:after {
         position: absolute;
         content: "";
-        height: 2px;
+        height: 1px;
         left: 0;
         width: 4rem;
         background: $yellow-cl;
         bottom: 17px;
     }
     &-r:after{
-        left: 51%;
+        left: 129px;
     }
     &-c:after{
         left: 50%;
@@ -187,5 +187,5 @@ a {
     border: 1px solid $white-cl;
     &:hover {
         background-color: $yellow-cl;
-      }
+    }
 }

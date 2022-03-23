@@ -1,1 +1,26 @@
 // css footer
+.footer {
+  height: 55px;
+  background-color: $black-cl;
+  color: $gray-light-2-cl;
+  font-size: 12px;
+  line-height: 1.74;
+  letter-spacing: 0.05em;
+  display: flex;
+  .container {
+    @include mid(true);
+    justify-content: space-between;
+  }
+  &__copyring {
+    color: $gray-light-2-cl;
+  }
+  &__logo {
+    max-width: 155px;
+    img {
+      width: 100%;
+    }
+  }
+  &__back {
+    text-transform: uppercase;
+  }
+}
