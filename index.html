@@ -8,13 +8,13 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Wooder</title>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="shorcut icon" href="./favicon.ico" />
     <meta name="title" content="" />
     <meta name="description" content="" />
 
     <!-- meta facebook -->
     <meta property="og:locale" content="vi" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="div" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="" />
@@ -31,7 +31,7 @@
         <div class="container-fluid">
           <div class="header__top">
             <div class="header__top-logo">
-              <img src="./img/logo.png" alt="" />
+              <a><img src="./img/logo.png" alt="" /></a>
               <h1 class="hidden">wooder</h1>
             </div>
             <ul class="header__top-menu">
@@ -51,18 +51,18 @@
                 <span class="header__lang-item">JP</span>
               </div> -->
             </div>
-            <div class="hambuger">
+            <div class="hambuger" >
               <span></span>
             </div>
-            <!--<nav class="nav">
-              <ul class="header__top-menu">
-                <li><a href="" class="--current-cl">home</a></li>
+            <nav class="nav" id="Nav" style="display: none;">
+              <ul class="">
+                <li><a href="" class="">home</a></li>
                 <li><a href="">products</a></li>
                 <li><a href="">about</a></li>
                 <li><a href="">gallery</a></li>
                 <li><a href="">news</a></li>
               </ul>
-            </nav> -->
+            </nav>
           </div>
         </div>
       </header>
@@ -74,13 +74,11 @@
                 <img src="./img/slide-1.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading --h2">wooder</h2>
-               
-                  <a href="" class="button">
-                    <span>LEARN MORE</span>
-                    <i><img class="arrow" src="./img/arrow.png" alt="" /></i>
-                  </a>
-              
+                <h2 class="heading">wooder</h2>
+                <a href="" class="button">
+                  <span>LEARN MORE</span>
+                  <img class="arrow" src="./img/arrow.png" alt="" />
+                </a>
               </div>
             </div>
             <!-- <div class="slider__list-item slider-2">
@@ -88,7 +86,7 @@
                 <img src="./img/slide-2.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading --h2">wooder</h2>
+                <h2 class="heading ">wooder</h2>
                 <div class="button">
                   <a href="">
                     <span>LEARN MORE</span>
@@ -102,7 +100,7 @@
                 <img src="./img/slide-3.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading --h2">wooder</h2>
+                <h2 class="heading ">wooder</h2>
                 <div class="button">
                   <a href="">
                     <span>LEARN MORE</span>
@@ -116,86 +114,80 @@
             <div class="container-fluid">
               <div class="slider__right-numbers">
                 <div class="number">01</div>
-                  <ol  class="dots">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ol>
+                <div id="dotted" class="dotted">
+                  <div class="dot active"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
               </div>
               <div class="slider__right-scroll">
                 <div class="mouse">
                   <img src="./img/mouse61.png" alt="" />
                 </div>
-                <div class="arrow">
-                  <i><img src="./img/arrow.png" alt="" /></i>
+                <div class="arrow arrow-scroll">
+                  <i><img src="./img/arrow-down-2.png" alt="" /></i>
                 </div>
               </div>
-              <div class="slider__right-ctr">
-                <div class="arrow button pre">
-                  <i><img src="./img/arrow.png" alt="" /></i>
+              <div class="slider__right-control">
+                <div class="button --ctrl pre">
+                  <img class="arrow" src="./img/arrow.png" alt="" />
                 </div>
-                <div class="arrow button next">
-                  <i><img src="./img/arrow.png" alt="" /></i>
+                <div class="button --ctrl next">
+                  <img class="arrow" src="./img/arrow.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="products">
+        <section class="products pd">
           <div class="container">
-            <div class="furniture display-flex">
-              <div class="furniture__content --content">
-                <article class="furniture__content-text">
-                  <h3 class="heading --h3 line">furniture</h3>
-                  <p class="info --mg-l">
-                    Wooder utilizes materials otherwise left behind, rendered
-                    useless in their original intent. By creating new pieces
-                    made 
-                  </p>
-                </article>
-                <div class="btn-more --mg-l underline">
+            <div class="product">
+              <div class="product__content textbox">
+                <h2 class="heading title-text">furniture</h2>
+                <p class="info">
+                  Wooder utilizes materials otherwise left behind, rendered
+                  useless in their original intent. By creating new pieces
+                  made 
+                </p>
+                <div class="btn-more">
                   <a href=""  class="--black-cl">
                     <span>learn more</span>
                     <img src="./img/arrow-brown-cl.png" alt="" />
                   </a>
                 </div>
               </div>
-              <div class="furniture__img">
+              <div class="product__img">
                 <img src="./img/furniture.jpg" alt="" />
               </div>
             </div>
-
-            <div class="decor display-flex">
-              <div class="decor__content --content --right">
-                <article class="decor__content-text ">
-                  <h3 class="heading --h3 line">Decor</h3>
-                  <p class="decor-info info --mg-r">
-                    We make all types of wooden decor as per design given by
-                    Architect,Interior designer, contractor which is suitable
-                  </p>
-                </article>
-                <div class="btn-more --mg-r underline underline-r">
-                  <a href="" class="--black-cl">
+            <div class="product --last">
+              <div class="product__content textbox --text-r">
+                <h2 class="heading title-text">Decor</h2>
+                <p class="info">
+                  We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
+                </p>
+                <div class="btn-more">
+                  <a href=""  class="--black-cl">
                     <span>learn more</span>
                     <img src="./img/arrow-brown-cl.png" alt="" />
                   </a>
                 </div>
               </div>
-              <div class="--left">
+              <div class="product__img">
                 <img src="./img/decor.jpg" alt="" />
               </div>
             </div>
 
             <div class="quality">
               <div class="container">
-                <article class="quality__top ">
-                  <h3 class="heading --h3 underline underline-c underline-h">wooder – is quality</h3>
+                <div class="quality__top textbox --text-c">
+                  <h2 class="heading title-text">wooder – is quality</h2>
                   <p class="quality__top-info">
-                    We create unique design objects made of rare wood, specially<br />
+                    We create unique design objects made of rare wood, specially
                     under the order. Look at the short video about our work.
                   </br>
-                </article>
+                </div>
                 <div class="quality__content">
                   <div class="quality__content-list">
                     <div class="media">
@@ -231,57 +223,54 @@
         </section>
         <section class="video">
           <div class="video__img">
-            <img src="./img/gregory-dalleau.jpg" alt="">
+            <img src="./img/gregory-dalleau.jpeg" alt="">
           </div>
           <div class="container">
-            <article class="video__content">
-              <h3 class="video__content-heading heading --h3 --text-cl-yellow">we Do the design<br/> of any complexity</h3>
+            <div class="video__content textbox --line-none">
+              <h2 class="video__content-heading title-text --yellow-cl">we Do the design of any complexity</h2>
               <div class="video__content-info">
-                This is a team of professionals that make the furniture and <br>wood
-                décor high standard. Creating modern designs. <br>Adhering to the global
+                This is a team of professionals that make the furniture and wood
+                décor high standard. Creating modern designs. Adhering to the global
                 quality standards. And we are doing work with love.
               </div>
-             
                 <a href="" class="video__content-btn button">
                     <img src="./img/ico-watch-video.png" alt="" />
                   <span>watch video</span>
                 </a>
-            
-            </article>
+            </div>
           </div>
         </section>
-        <section class="about">
+        <section class="about pd">
           <div class="container">
-            <div class="about__inner display-flex">
+            <div class="about__inner">
               <div class="about__inner-img">
                 <img src="./img/about-us.jpg" alt="wooder" />
               </div>
-              <article class="about__inner-content">
-                <h3 class="about-heading heading --h3 line">About us</h3>
+              <div class="about__inner-content textbox">
+                <h2 class="about-heading title-text">About us</h2>
                 <div class="info">
                   We are a team of professionals in the wood processing and the
                   creation of wooden furniture of the highest class
                 </div>
-                <div class="about-btn btn-more underline">
-                  <a href=""  class="--black-cl">
+                <div class="about-btn btn-more">
+                  <a href="" class="--black-cl">
                     <span>learn more</span>
                     <img src="./img/arrow-brown-cl.png" alt="" />
                   </a>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
-        <section class="gallery">
+        <section class="gallery pd">
           <div class="container">
-            <article class="gallery__content">
-              <h3 class="gallery__content-heading
-               heading --h3">Gallery</h3>
+            <div class="gallery__content textbox --line-none">
+              <h2 class="title-text --white-cl ">Gallery</h2>
               <div class="gallery__content-info">
                 We are a team of professionals in the wood processing and the
                 creation of wooden furniture of the highest class
               </div>
-            </article>
+            </div>
             <div class="gallery__imgs">
               <div class="gallery__imgs-item item1">
                 <a href=""><img src="./img/gallery-1-1.jpg" alt="wooder" /></a>
@@ -301,70 +290,71 @@
             </div>
           </div>
         </section>
-        <section class="news">
+        <section class="news pd">
           <div class="container">
-            <article class="news__content">
-              <h3 class="news__content-heading heading --h3">news</h3>
-              <div class="news__content-info">
+            <div class="news__content textbox --line-none">
+              <h2 class="news__content-heading title-text">news</h2>
+              <div class="news__content-info info">
               We are a team of professionals in the wood processing and the
               creation of wooden furniture of the highest class
               </div>
-            </article>
+            </div>
             <div class="news__list">
               <div class="news__list-item">
                 <div class="img">
-                  <img src="./img/news-1.jpg" alt="wooder" />
+                 <a href=""><img src="./img/news-1.jpg" alt="wooder" /></a> 
                 </div>
                 <div class="content">
-                  <h4 class="title">Where does it come from?</h4>
+                  <h3 class="title"><a href="#" title=">Where does it come from?">Where does it come from?</a></h3>
                   <div class="desc">
                     Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur...
+                    text. It has roots in a piece of classical Latin literatur
                   </div>
                 </div>
               </div>
               <div class="news__list-item">
                 <div class="img">
-                  <img src="./img/news-2.jpg" alt="wooder" />
+                <a href=""><img src="./img/news-2.jpg" alt="wooder" /></a>  
                 </div>
                 <div class="content">
-                  <h4 class="title">
-                    There are many variations of passages
-                  </h4>
+                    <h3 class="title"><a href="#" title="There are many variations of passages">There are many variations of passages</a>
+                    </h3>
+                  </a>
                   <div class="desc">
                     Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur...
+                    text. It has roots in a piece of classical Latin literatur
                   </div>
                 </div>
               </div>
               <div class="news__list-item">
                 <div class="img">
-                  <img src="./img/news-3.jpg" alt="wooder" />
+                  <a href=""><img src="./img/news-3.jpg" alt="wooder" /></a>
                 </div>
-                <div class="content">
-                  <h4 class="title">
-                    It is a long established fact that a reader
-                  </h4>
+                 <div class="content">
+                    <h3 class="title">
+                      <a href="" title="It is a long established fact that a reader">It is a long established fact that a reader</a>
+                    </h3>
+                  </a>
                   <div class="desc">
                     Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur...
+                    text. It has roots in a piece of classical Latin literatur
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="carouseul">
-          <div class="carouseul__img img-1">
+        <section class="photo">
+          <div class="photo__img img-1">
             <img src="./img/scroll-img-1.jpg" alt="wooder" />
           </div>
-          <div class="carouseul__img img-2">
+          <div class="photo__img img-2">
             <img src="./img/scroll-img-2.jpg" alt="wooder" />
           </div>
-          <div class="carouseul__img img-3">
+          <div class="photo__img img-3">
             <img src="./img/scroll-img-3.jpg" alt="wooder" />
           </div>
-          <div class="carouseul__img img-4">
+          <div class="photo__img img-4">
             <img src="./img/scroll-img-4.jpg" alt="wooder" />
           </div>
         </section>
@@ -372,13 +362,11 @@
     </div>
     <footer class="footer">
       <div class="container">
-        <p class="footer__copyring">© 2016 WOODER, Demo by CFD</p>
-        <div class="footer__logo">
+        <p class="footer__item --copyring">© 2016 WOODER, Demo by CFD</p>
+        <div class="footer__item --logo">
           <img src="./img/logo.png" alt="" />
         </div>
-        <div class="footer__back">
-          <span>back to top</span>
-        </div>
+          <a class="footer__item --back" id="toTop"><span>back to top</span></a>
       </div>
     </footer>
     <!-- js -->

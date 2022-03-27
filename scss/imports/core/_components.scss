@@ -14,6 +14,9 @@ img {
 }
 a {
     text-decoration: none;
+    @include text(var(--body14-fs), $main-font-b, var(--body14-lh), $white-cl, uppercase);
+    letter-spacing: 0;
+    cursor: pointer;
 }
 
 // colors (tuỳ chỉnh)
@@ -23,9 +26,9 @@ a {
 .--black-cl {
     color: $black-cl;
 }
-// .--blue-cl {
-//     color: $blue-cl;
-// }
+.--yellow-cl {
+    color: $yellow-cl;
+}
 
 // css article (nội dung chi tiết bài viết)
 article {
@@ -114,14 +117,19 @@ article {
         line-height: var(--h1-lh);
     }
     &.--h2 {
-        @include text(var(--h2-fs), $primary-font-b, var(--h2-lh), $yellow-cl, uppercase);
+        @include text(var(--h2-fs), $main-font-b, var(--h2-lh), $yellow-cl, uppercase);
         margin-bottom: 3.5rem;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.05em;
     }
     &.--h3 {
         text-transform: uppercase;
-        font-family: $primary-font-b;
+        font-family: $main-font-b;
         letter-spacing: 0.07em;
+    }
+    @include xs() {
+        &.--h3 {
+            line-height: var(--h3-lh);
+        }
     }
 }
 
@@ -129,63 +137,149 @@ p {
     color: $gray-cl;
 }
 
-a {
-    @include text(var(--body14-fs), $primary-font-b, var(--body14-lh), $white-cl, uppercase);
-    letter-spacing: 0.2em;
-}
-
-.arrow {
-    width: 3rem;
-}
-
-.display-flex {
-    @include mid(true);
-    justify-content: space-between;
-    .--content {
-        max-width: 38rem;
-        .info {
-            word-break: break-all;
-        }
-    }
-    .--mg-l {
-        margin-left: 10rem;
-    }
-    .--mg-r {
-        margin-right: 10rem;
-    }
-    .--left {
-        order: 0;
-    }
-    .--right {
-        order: 1;
-        text-align: right;
-    }
-}
-
-.underline {
-    position: relative;
-    &:after {
-        position: absolute;
-        content: "";
-        height: 1px;
-        left: 0;
-        width: 4rem;
-        background: $yellow-cl;
-        bottom: 17px;
-    }
-    &-r:after{
-        left: 129px;
-    }
-    &-c:after{
-        left: 50%;
-        bottom: 10px;
-        transform: translateX(-50%);
-    }
-}
-
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid $white-cl;
+    @include transition($t);
+    span {
+        letter-spacing: var(--body14-ls);
+    }
     &:hover {
         background-color: $yellow-cl;
+    }
+}
+
+.btn-more {
+    display: inline-flex;
+    position: relative;
+    a {
+        letter-spacing: 2px;
+    }
+    img {
+        margin-left: 10px;
+        position: relative;
+        @include transition($t);
+        @include transform(translateX(0));
+    }
+    &:before {
+        content: "";
+        @include size(35px, 2px);
+        background-color: $yellow-cl;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+    }
+    @include transition($t);
+    &:hover {
+        @include transition($t);
+        span {
+            opacity: 0.5;
+            @include transition($t);
+        }
+        img {
+            @include transform(translateX(8px));
+            @include transition($t);
+        }
+    }
+}
+
+.textbox {
+    --pLeft: 100px;
+    --pRight: 100px;
+    padding-left: var(--pLeft);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title-text {
+        @include text(var(--title-h2-fs), $main-font-b, normal, $text-cl, uppercase);
+        letter-spacing: var(--title-h2-ls);
+        display: inline-flex;
+        align-items: center;
+        &.--yellow-cl {
+            color: $yellow-cl;
+        }
+        &.--white-cl {
+            color: $white-cl;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            @include size(80px, 2px);
+            background-color: $gray-light-cl;
+            margin-left: -80px;
+            left: -20px;
+            position: relative;
+        }
+    }
+    &.--line-none {
+        padding-left: 0;
+        .title-text {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .info {
+        padding: 10px 0 28px;
+    }
+    &.--text-r {
+        align-items: flex-end;
+        text-align: right;
+        padding-left: 0;
+        padding-right: var(--pRight);
+        .title-text {
+            flex-direction: row-reverse;
+            &:before {
+                margin-left: unset;
+                left: unset;
+                margin-right: -80px;
+                right: -20px;
+            }
+        }
+    }
+    &.--text-c {
+        --pLeft: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        .title-text {
+            flex-direction: column-reverse;
+            &:before {
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                background-color: $yellow-cl;
+                width: 40px;
+                margin: 15px auto 20px;
+            }
+        }
+    }
+    @include sm {
+        --pLeft: 0;
+        --pRight: 0;
+        &:not(.--text-c) {
+            .title-text {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include xs {
+        .info {
+            max-width: 480px;
+            padding: 5px 0 18px;
+        }
+        &.--text-r {
+            text-align: right;
+            .title-text {
+                flex-direction: unset;
+            }
+        }
     }
 }

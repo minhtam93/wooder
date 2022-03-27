@@ -2,6 +2,8 @@
 .header {
   .container-fluid {
     position: fixed;
+    left: 0;
+    top: 0;
     z-index: 1;
     max-width: $container-max-width;
   }
@@ -10,9 +12,14 @@
     justify-content: space-between;
     height: var(--height-header);
     &-logo {
+      display: flex;
+      align-items: center;
       max-width: 177px;
       .hidden {
         display: none;
+      }
+      a {
+        display: flex;
       }
     }
     &-menu {
@@ -23,42 +30,39 @@
       height: 100%;
       li {
         height: 100%;
-        margin-right: 7rem;
+        margin-right: 60px;
         &:last-child {
           margin-right: 0;
         }
         a {
+          height: 100%;
           @include text(
             var(--body15-fs),
-            $primary-font-b,
+            $main-font-b,
             var(--body15-lh),
             $white-cl,
             uppercase
           );
           letter-spacing: 0.4px;
           @include mid(true);
-          height: 100%;
           position: relative;
           overflow: hidden;
           &:hover {
             opacity: 0.75;
-            visibility: visible;
           }
           &:after {
             content: "";
             position: absolute;
             left: 0;
             bottom: 20px;
-            height: 2px;
-            width: 100%;
+            @include size(100%, 2px);
             background-color: $white-cl;
             @include transform(scaleX(0));
-            @include transition(0.3s);
+            @include transition($t);
           }
           &:hover {
             &:after {
               @include transform(scaleX(1));
-              // @include transform-origin(bottom);
             }
           }
         }
@@ -70,9 +74,21 @@
     @include mid(true);
     cursor: pointer;
     &-current {
-      @include text(var(--body16-fs), $primary-font-b, var(--body16-lh), $white-cl, none);
+      height: 100%;
+      @include mid(true);
+      @include text(
+        var(--body16-fs),
+        $main-font-b,
+        var(--body16-lh),
+        $white-cl,
+        none
+      );
       i {
+        padding-left: 5px;
+        display: flex;
+        height: 0;
         img {
+          align-self: center;
           width: 11px;
         }
       }
@@ -82,11 +98,9 @@
       position: absolute;
       right: 30px;
       top: 60px;
-      width: 80px;
-      height: 80px;
+      @include size(80px);
       text-align: right;
       padding-right: 15px;
-      display: au;
       height: auto;
       line-height: 30px;
       @include visible();
@@ -95,19 +109,86 @@
       }
     }
   }
-  .hambuger{
+  .hambuger {
     display: none;
   }
 
   @include md() {
     &__top {
+      --height-header: 50px;
+      &-logo {
+        display: flex;
+        align-items: center;
+        max-width: unset;
+        flex-basis: 90%;
+        img {
+          width: 150px;
+        }
+      }
+      &-menu {
+        li {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  @include sm() {
+    &__top {
       &-menu {
         display: none;
       }
-      .hambuger{
-        display: none;
+      .hambuger {
+        height: 0;
+        cursor: pointer;
+        width: 25px;
+        @include mid(true);
+        span {
+          position: relative;
+          height: 100%;
+          background-color: $white-cl;
+          cursor: pointer;
+          @include size(35px, 2px);
+          @include transition($t);
+          &.is-active {
+            background-color: inherit;
+          }
+          &::before,
+          &::after {
+            content: "";
+            top: -6px;
+            height: 2px;
+            width: 100%;
+            background-color: $white-cl;
+            position: absolute;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+          }
+          &::after {
+            top: 6px;
+          }
+          &.is-active {
+            &::before {
+              top: 0;
+              transform: rotate(45deg);
+              background: black;
+            }
+            &::after {
+              top: 0;
+              transform: rotate(135deg);
+              background: black;
+            }
+          }
+        }
       }
-    
+    }
+    &__lang {
+      margin-right: 10px;
+      &-current {
+        i img {
+          width: 15px;
+        }
+      }
     }
   }
 }

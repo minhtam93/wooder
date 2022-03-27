@@ -11,12 +11,14 @@
 }
 html {
     font-size: 62.5%; // => 10px = 1rem
+    scroll-behavior: smooth;
 }
 body {
     width: 100%;
     max-width: $container-max-width;
     margin: auto;
-    @include text(var(--body16-fs), $primary-font, var(--body16-lh), $black-cl, none); // tuỳ chỉnh
+    @include text(var(--body16-fs), $main-font, normal, $black-cl, none);
+    letter-spacing: var(--body16-ls);
     background: $white-cl;
     position: relative;
     .container-fluid {
@@ -33,8 +35,8 @@ body {
     .container {
         width: 100%;
         max-width: $container-width;
-        padding-right: calc(var(--gap) / 2);
-        padding-left: calc(var(--gap) / 2);
+        padding-right: calc(var(--gap) / 2 );
+        padding-left: calc(var(--gap) / 2 );
         margin-right: auto;
         margin-left: auto;
     }
@@ -64,6 +66,9 @@ body {
         width: 100%;
         margin: auto;
         @include visible;
+        .pd{
+            padding: var(--pd-section) 0;
+        }
     }
     @include lg {
         // CSS responsive large desktop

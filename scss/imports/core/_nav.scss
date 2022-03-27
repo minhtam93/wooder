@@ -1,1 +1,19 @@
 // css navigator (Menu)
+.nav {
+  display: none;
+  @include md() {
+    display: block;
+    position: fixed;
+    top: calc(50% + var(--height-header));
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: $gray-cl;
+    width: 100%;
+    height: 100vh;
+    @include mid(true);
+  }
+  ul {
+      text-align: center;
+  }
+}

@@ -3,8 +3,6 @@
 $container-max-width: 2400px;
 $container-width: 1005px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
 
-
-
 /*GRID - media queries breakpoints*/
 $xxs-min: 375px; // CÓ THỂ TÙY CHỈNH
 $xs-min: 768px; // KHÔNG THAY ĐỔI
@@ -22,10 +20,20 @@ $lg-max: ($lg-min - 1); // Large Desktop
 // colors - tuỳ chỉnh
 $white-cl: #fff;
 $black-cl: #000;
+
 $gray-cl: #464646;
 $gray-light-cl: #555555;
 $gray-light-2-cl: #b0b0b0;
 $yellow-cl: #bea67c;
+
+// global text color
+$text-cl: #010101;
+$gray-text-cl: #464646;
+
+//font
+$main-font: "Pnr", sans-serif;
+$main-font-b: "Pnb", sans-serif;
+$main-font-e: "Pne", sans-serif;
 
 $gradient-cl: linear-gradient(180deg, #df1cff 0%, #814bf6 50.55%, #00bcff 100%);
 
@@ -40,74 +48,52 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
     // font-size & line-height heading
 
-    --h1-fs: 7.2rem;
-    --h1-lh: 8rem;
+    --slider-h2-fs: 83px;
+    --slider-h2-lh: 83px;
+    --slider-h2-ls: 16.6px;
 
-    // --h2-fs: 4rem;
-    // --h2-lh: 2.08;
+    --title-h2-fs: 40px;
+    --title-h2-lh: 83px;
+    --title-h2-ls: 2.8px;
 
-    // --h3-fs: 3.2rem;
-    // --h3-lh: 4.2rem;
+    --h3-fs: 18px;
+    --h3-lh: 24px;
 
-    // --h4-fs: 2.4rem;
-    // --h4-lh: 3.2rem;
+    --body16-fs: 16px;
+    --body16-lh: 22px;
+    --body16-ls: 0.4px;
 
-    --h2-fs: 8.333rem;
-    --h2-lh: 8.3rem;
+    --body15-fs: 15px;
 
-    --h3-fs: 4rem;
-    --h3-lh: 8.3rem;
-
-    --h4-fs: 1.8rem;
-    --h4-lh: 2.4rem;
-
-    --h5-fs: 2rem;
-    --h5-lh: 3rem;
-
-    --body16-fs: 1.6rem;
-    --body16-lh: 2.2rem;
-
-    --body15-fs: 1.5rem;
-    --body15-lh: 2.25rem;
-
-    --body14-fs: 1.4rem;
-    --body14-lh: 5.8rem;
+    --body14-fs: 14px;
+    --body14-ls: 2.8px;
 
     // Genaral Variable
-
     --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
 
     --height-header: 80px;
     --height-button: 50px;
-    --ptop: 150px;
-    --pd-section: 120px;
+    --pd-section: 90px;
 
     @media (max-width: $sm-max) {
-        // Tablet
+        --title-h2-fs: 30px;
+
+        --h3-fs: 15px;
+        --h3-lh: 20px;
     }
     @media (max-width: $xs-max) {
         // Mobile
-        --h1-fs: 3.6rem;
-        --h1-lh: 4.2rem;
+        --slider-h2-fs: 57px;
+        --slider-h2-lh: 40px;
+        --slider-h2-ls: 4px;
 
-        --h2-fs: 2.8rem;
-        --h2-lh: 3.8rem;
+        --title-h2-fs: 25px;
 
-        --h3-fs: 2.2rem;
-        --h3-lh: 3rem;
-
-        --h4-fs: 2rem;
-        --h4-lh: 3.2rem;
-
-        --gap: 20px;
+        --body14-fs: 14px;
+        --body14-ls: 2px;
 
         --height-header: 70px;
         --pd-section: 50px;
-        --ptop: 120px;
     }
 }
 
-//font
-$primary-font: "Pnr", sans-serif;
-$primary-font-b: "Pnb", sans-serif;
-$primary-font-e: "Pne", sans-serif;

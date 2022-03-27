@@ -1,26 +1,51 @@
 // css footer
 .footer {
-  height: 55px;
+  padding: 30px 0;
   background-color: $black-cl;
-  color: $gray-light-2-cl;
-  font-size: 12px;
-  line-height: 1.74;
   letter-spacing: 0.05em;
   display: flex;
+  position: relative;
   .container {
     @include mid(true);
     justify-content: space-between;
   }
-  &__copyring {
-    color: $gray-light-2-cl;
-  }
-  &__logo {
-    max-width: 155px;
-    img {
-      width: 100%;
+  &__item {
+    @include text(12px, $main-font, normal, $gray-light-2-cl, normal);
+    &.--logo {
+      display: flex;
+      max-width: 155px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        width: 100%;
+      }
+    }
+    a {
+      text-transform: uppercase;
+      font-family: $main-font;
+      font-size: 12px;
+      cursor: pointer;
     }
   }
-  &__back {
-    text-transform: uppercase;
+
+  @include xs() {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__item {
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &.--logo {
+        width: 150px;
+        position: initial;
+        left: initial;
+        transform: initial;
+        margin: 10px auto;
+      }
+    }
   }
 }
