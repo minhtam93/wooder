@@ -15,10 +15,10 @@
     <!-- meta facebook -->
     <meta property="og:locale" content="vi" />
     <meta property="og:type" content="div" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:description" content="We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class" />
     <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:site_name" content="Wooder" />
     <meta property="og:image" content="" />
 
     <link rel="stylesheet" href="./dest/style.min.css" />
@@ -27,6 +27,8 @@
 
   <body class="homepage">
     <div class="wrapper">
+      <div class="progressbar-top">
+      </div>
       <header class="header">
         <div class="container-fluid">
           <div class="header__top">
@@ -35,32 +37,35 @@
               <h1 class="hidden">wooder</h1>
             </div>
             <ul class="header__top-menu">
-              <li><a href="" class="--current-cl">home</a></li>
-              <li><a href="">products</a></li>
-              <li><a href="">about</a></li>
-              <li><a href="">gallery</a></li>
-              <li><a href="">news</a></li>
+              <li><a href="#slider" class="is-active">home</a></li>
+              <li><a href="#products">products</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#gallery">gallery</a></li>
+              <li><a href="#news">news</a></li>
             </ul>
-            <div class="header__lang">
-              <div class="header__lang-current">
-                <span class="lang-en">EN</span>
-                <i><img src="./img/arrow-down.png" alt=""></i>
+            <div class="header-left">
+              <div class="header__lang">
+                <div class="header__lang-current">
+                  <span class="lang-en">EN</span>
+                  <i><img src="./img/arrow-down.png" alt=""></i>
+                </div>
+                <div class="header__lang-other">
+                  <span class="header__lang-item">VN</span>
+                  <span class="header__lang-item">JP</span>
+                  <span class="header__lang-item">AU</span>
+                </div>
               </div>
-              <!-- <div class="header__lang-other">
-                <span class="header__lang-item">VN</span>
-                <span class="header__lang-item">JP</span>
-              </div> -->
+              <div class="hambuger" >
+                <span></span>
+              </div>
             </div>
-            <div class="hambuger" >
-              <span></span>
-            </div>
-            <nav class="nav" id="Nav" style="display: none;">
+            <nav class="nav" id="Nav">
               <ul class="">
-                <li><a href="" class="">home</a></li>
-                <li><a href="">products</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">gallery</a></li>
-                <li><a href="">news</a></li>
+                <li><a href="#slider" class="">home</a></li>
+                <li><a href="#products">products</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#news">news</a></li>
               </ul>
             </nav>
           </div>
@@ -69,25 +74,25 @@
       <main class="mainwrapper">
         <section class="slider">
           <div class="slider__list">
-            <div class="slider__list-item slider-1">
+            <div class="slider__list-item slider-1 is-active">
               <div class="img">
                 <img src="./img/slide-1.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading">wooder</h2>
-                <a href="" class="button">
+                <h2 class="heading" style="--delay:0.2s">wooder</h2>
+                <a href="" class="button" style="--delay:0.5s">
                   <span>LEARN MORE</span>
                   <img class="arrow" src="./img/arrow.png" alt="" />
                 </a>
               </div>
             </div>
-            <!-- <div class="slider__list-item slider-2">
+            <div class="slider__list-item slider-2">
               <div class="img">
                 <img src="./img/slide-2.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading ">wooder</h2>
-                <div class="button">
+                <h2 class="heading" style="--delay:0.2s">wooder</h2>
+                <div class="button" style="--delay:0.5s">
                   <a href="">
                     <span>LEARN MORE</span>
                     <img class="arrow" src="./img/arrow.png" alt="" />
@@ -100,27 +105,24 @@
                 <img src="./img/slide-3.jpg" alt="" />
               </div>
               <div class="text">
-                <h2 class="heading ">wooder</h2>
-                <div class="button">
+                <h2 class="heading" style="--delay:0.2s">wooder</h2>
+                <div class="button" style="--delay:0.5s">
                   <a href="">
                     <span>LEARN MORE</span>
                     <img class="arrow" src="./img/arrow.png" alt="" />
                   </a>
                 </div>
               </div>
-            </div> -->
+            </div> 
           </div>
           <div class="slider__right">
             <div class="container-fluid">
               <div class="slider__right-numbers">
                 <div class="number">01</div>
-                <div id="dotted" class="dotted">
-                  <div class="dot active"></div>
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-                </div>
-              </div>
+                <div class="dotted"></div>
+                
+              </div> 
+             
               <div class="slider__right-scroll">
                 <div class="mouse">
                   <img src="./img/mouse61.png" alt="" />
@@ -142,10 +144,10 @@
         </section>
         <section class="products pd">
           <div class="container">
-            <div class="product">
+            <div class="product" data-aos="fade-up">
               <div class="product__content textbox">
                 <h2 class="heading title-text">furniture</h2>
-                <p class="info">
+                <p class="info product-info">
                   Wooder utilizes materials otherwise left behind, rendered
                   useless in their original intent. By creating new pieces
                   made 
@@ -161,10 +163,10 @@
                 <img src="./img/furniture.jpg" alt="" />
               </div>
             </div>
-            <div class="product --last">
+            <div class="product --last" data-aos="fade-up" data-aos-delay="500">
               <div class="product__content textbox --text-r">
                 <h2 class="heading title-text">Decor</h2>
-                <p class="info">
+                <p class="info product-info">
                   We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
                 </p>
                 <div class="btn-more">
@@ -192,7 +194,7 @@
                   <div class="quality__content-list">
                     <div class="media">
                       <img src="./img/quality-1.jpg" alt="" />
-                      <div class="play-btn">
+                      <div class="play-btn" data-video-id="o3abIDTI2gE">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
@@ -201,7 +203,7 @@
                   <div class="quality__content-list">
                     <div class="media">
                       <img src="./img/quality-2.jpg" alt="" />
-                      <div class="play-btn">
+                      <div class="play-btn" data-video-id="sw9zpH717ts">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
@@ -210,7 +212,7 @@
                   <div class="quality__content-list">
                     <div class="media">
                       <img src="./img/quality-3.jpg" alt="" />
-                      <div class="play-btn">
+                      <div class="play-btn" data-video-id="lTi_NWV8KwA">
                         <img src="./img/play.png" alt="" />
                       </div>
                     </div>
@@ -221,6 +223,14 @@
             </div>
           </div>
         </section>
+        <div class="popup-video">
+          <div class="popup-wrap">
+            <div class="popup-video__iframe"></div>
+            <iframe width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="close"></div>
+          
+          </div>
+        </div>
         <section class="video">
           <div class="video__img">
             <img src="./img/gregory-dalleau.jpeg" alt="">
@@ -240,7 +250,7 @@
             </div>
           </div>
         </section>
-        <section class="about pd">
+        <section class="about pd" >
           <div class="container">
             <div class="about__inner">
               <div class="about__inner-img">
@@ -273,19 +283,19 @@
             </div>
             <div class="gallery__imgs">
               <div class="gallery__imgs-item item1">
-                <a href=""><img src="./img/gallery-1-1.jpg" alt="wooder" /></a>
+                <a href="./img/gallery-1-2.jpg" data-fancybox="gallery"><img src="./img/gallery-1-1.jpg" alt="wooder" /></a>
               </div>
               <div class="gallery__imgs-item item2">
-                <a href=""><img src="./img/gallery-2-1.jpg" alt="wooder" /></a>
+                <a href="./img/gallery-2-2.jpg" data-fancybox="gallery"><img src="./img/gallery-2-1.jpg" alt="wooder" /></a>
               </div>
               <div class="gallery__imgs-item item3">
-                <a href=""><img src="./img/gallery-3-1.jpg" alt="wooder" /></a>
+                <a href="./img/gallery-3-2.jpg" data-fancybox="gallery"><img src="./img/gallery-3-1.jpg" alt="wooder" /></a>
               </div>
               <div class="gallery__imgs-item item4">
-                <a href=""><img src="./img/gallery-4-1.jpg" alt="wooder" /></a>
+                <a href="./img/gallery-4-2.jpg" data-fancybox="gallery"><img src="./img/gallery-4-1.jpg" alt="wooder" /></a>
               </div>
               <div class="gallery__imgs-item item5">
-                <a href=""><img src="./img/gallery-5-1.jpg" alt="wooder" /></a>
+                <a href="./img/gallery-5-2.jpg" data-fancybox="gallery"><img src="./img/gallery-5-1.jpg" alt="wooder" /></a>
               </div>
             </div>
           </div>
@@ -299,66 +309,188 @@
               creation of wooden furniture of the highest class
               </div>
             </div>
-            <div class="news__list">
-              <div class="news__list-item">
-                <div class="img">
-                 <a href=""><img src="./img/news-1.jpg" alt="wooder" /></a> 
+            <div class="news__tags">
+              <div class="news__tag-text">
+                <div class="tag is-active">Internal</div>
+                <div class="tag">Enternal</div>
+              </div>
+              <div class="news__list is-active">
+                <div class="news__list-item">
+                  <div class="img">
+                   <a href=""><img src="./img/news-1.jpg" alt="wooder" /></a> 
+                  </div>
+                  <div class="content">
+                    <h3 class="title"><a href="#" title=">Where does it come from?">Where does it come from?</a></h3>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
+                  </div>
                 </div>
-                <div class="content">
-                  <h3 class="title"><a href="#" title=">Where does it come from?">Where does it come from?</a></h3>
-                  <div class="desc">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur
+                <div class="news__list-item">
+                  <div class="img">
+                  <a href=""><img src="./img/news-2.jpg" alt="wooder" /></a>  
+                  </div>
+                  <div class="content">
+                      <h3 class="title"><a href="#" title="There are many variations of passages">There are many variations of passages</a>
+                      </h3>
+                    </a>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
+                  </div>
+                </div>
+                <div class="news__list-item">
+                  <div class="img">
+                    <a href=""><img src="./img/news-3.jpg" alt="wooder" /></a>
+                  </div>
+                   <div class="content">
+                      <h3 class="title">
+                        <a href="" title="It is a long established fact that a reader">It is a long established fact that a reader</a>
+                      </h3>
+                    </a>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="news__list-item">
-                <div class="img">
-                <a href=""><img src="./img/news-2.jpg" alt="wooder" /></a>  
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#" title="There are many variations of passages">There are many variations of passages</a>
-                    </h3>
-                  </a>
-                  <div class="desc">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur
+              <div class="news__list">
+                <div class="news__list-item">
+                  <div class="img">
+                  <a href=""><img src="./img/news-2.jpg" alt="wooder" /></a>  
+                  </div>
+                  <div class="content">
+                      <h3 class="title"><a href="#" title="There are many variations of passages">There are many variations of passages</a>
+                      </h3>
+                    </a>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="news__list-item">
-                <div class="img">
-                  <a href=""><img src="./img/news-3.jpg" alt="wooder" /></a>
+                <div class="news__list-item">
+                  <div class="img">
+                   <a href=""><img src="./img/news-1.jpg" alt="wooder" /></a> 
+                  </div>
+                  <div class="content">
+                    <h3 class="title"><a href="#" title=">Where does it come from?">Where does it come from?</a></h3>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
+                  </div>
                 </div>
-                 <div class="content">
-                    <h3 class="title">
-                      <a href="" title="It is a long established fact that a reader">It is a long established fact that a reader</a>
-                    </h3>
-                  </a>
-                  <div class="desc">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literatur
+                <div class="news__list-item">
+                  <div class="img">
+                    <a href=""><img src="./img/news-3.jpg" alt="wooder" /></a>
+                  </div>
+                   <div class="content">
+                      <h3 class="title">
+                        <a href="" title="It is a long established fact that a reader">It is a long established fact that a reader</a>
+                      </h3>
+                    </a>
+                    <div class="desc">
+                      Contrary to popular belief, Lorem Ipsum is not simply random
+                      text. It has roots in a piece of classical Latin literatur
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="photo">
-          <div class="photo__img img-1">
+        <!-- FAQ-phần luyện tập js thêm -->
+        <!-- <section class="faqs">
+          <div class="container">
+            <div class="textbox --line-none">
+              <h2 class="title-text">faq</h2>
+            </div>
+            <div class="fag__wrap">
+              <div class="fag">
+                <div class="fag__title arrow-origin --right">
+                  About Wooder
+                </div>
+                <div class="fag__content">
+                  <p>
+                    The Wooder brand started with an ingenious idea. In 1883, Friedrich Fischer designed a ball-grinding machine that, for the first time, made it possible to produce absolutely round steel balls through grinding. This invention is regarded as the foundation for the entire rolling bearing industry.
+                  </p>
+                </div>
+              </div>
+              <div class="fag">
+                <div class="fag__title arrow-origin --right">
+                  Wooder Promise
+                </div>
+                <div class="fag__content">
+                  <p> They’re committed to delivering value to their stakeholders, as well as quality solutions that make a difference to optimising plant availability and turnaround time, all because of their consumer focused approach. FAG has an extraordinarily broad wealth of expertise and all modern technologies needed to achieve the highest levels of economy and precision in manufacturing. This ranges from the high-volume production that predominantly takes place in the Automotive division through to project-based business in Industrial and Aerospace.
+                  </p>
+                </div>
+              </div>
+              <div class="fag">
+                <div class="fag__title arrow-origin --right">
+                  Best at what they do
+                </div>
+                <div class="fag__content">
+                  <p> Whether it is high-precision bearings for aerospace applications, sensor wheel bearings for passenger cars, or large-size bearings with outside diameters of over four meters for wind turbines, FAG products are the number one choice for all customers, so come speak to us for complete peace of mind.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </section> -->
+        <section class="photos">
+          <div class="photo">
             <img src="./img/scroll-img-1.jpg" alt="wooder" />
+          <img src="./img/scroll-img-2.jpg" alt="wooder" />
+          <img src="./img/scroll-img-3.jpg" alt="wooder" />
+          <img src="./img/scroll-img-4.jpg" alt="wooder" />
           </div>
-          <div class="photo__img img-2">
-            <img src="./img/scroll-img-2.jpg" alt="wooder" />
-          </div>
-          <div class="photo__img img-3">
-            <img src="./img/scroll-img-3.jpg" alt="wooder" />
-          </div>
-          <div class="photo__img img-4">
-            <img src="./img/scroll-img-4.jpg" alt="wooder" />
+          <div class="timeline">
+            <div class="timeline__progressbar"></div>
           </div>
         </section>
       </main>
+
+      <!-- FORM-phần luyện tập js thêm -->
+      <!-- <form action="" method="post" class="form">
+        <div class="form__group">
+          <label for="hoten" class="form__group-label">Họ tên</label>
+          <input type="text" class="form__group-control" name="hovaten" placeholder="Nguyen Van A" value=""/>
+        </div>
+        <div class="form__group">
+          <label for="ngaysinh" class="form__group-label">Ngày sinh</label>
+          <input type="text" class="form__group-control" name="ngaysinh" placeholder="1990/09/09" value="">
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__group-label">Email</label>
+          <input type="text" class="form__group-control" name="email" placeholder="abc@gmail.com" value="">
+        </div>
+        <div class="form__group">
+          <label for="tel" class="form__group-label">Số điện thoại</label>
+          <input type="text" class="form__group-control" name="tel" placeholder="08012345678" value="">
+        </div>
+        <div class="form__group">
+          <label for="gender" class="form__group-label">Giới tính</label>
+          <div class="gender-list">
+            <div class="gender-item">
+              <input type="radio" class="" name="male" value="male">
+              <label for="male" class="form__group-label">Male</label>
+            </div>
+            <div class="gender-item">
+              <input type="radio" class="" name="female" >
+              <label for="female" class="form__group-label">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="password" class="form__group-label">Mật khẩu</label>
+          <input type="password" class="form__group-control" name="password">
+        </div>
+        <input type="button" value="submit" class="submit-btn" name="submit" value="">
+      </form> -->
+
     </div>
     <footer class="footer">
       <div class="container">
@@ -366,11 +498,23 @@
         <div class="footer__item --logo">
           <img src="./img/logo.png" alt="" />
         </div>
-          <a class="footer__item --back" id="toTop"><span>back to top</span></a>
+          <a class="footer__item --back" ><span>back to top</span></a>
       </div>
     </footer>
+    <a id="toTop" class="arrow-origin --top"></a>
+
     <!-- js -->
+   
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
+    <script>
+      AOS.init({
+        disable: 'mobile',
+        offset: 200,
+        duration: 900,
+        easing: 'ease-in-sine',
+        delay: 100,
+      });
+      </script>
   </body>
 </html>

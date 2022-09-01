@@ -1,11 +1,18 @@
 // css header
 .header {
+  --widthLogo: 177px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
   .container-fluid {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
     max-width: $container-max-width;
+  }
+  @include transition($t);
+  &.is-active {
+    background-color: $black-cl;
+    @include transition($t);
   }
   &__top {
     @include mid(true);
@@ -14,7 +21,7 @@
     &-logo {
       display: flex;
       align-items: center;
-      max-width: 177px;
+      max-width: var(--widthLogo);
       .hidden {
         display: none;
       }
@@ -65,11 +72,19 @@
               @include transform(scaleX(1));
             }
           }
+          &.is-active {
+            color: $yellow-cl;
+          }
         }
       }
     }
   }
+  &-left {
+    @include mid(true);
+    height: 100%;
+  }
   &__lang {
+    position: relative;
     height: 100%;
     @include mid(true);
     cursor: pointer;
@@ -94,52 +109,60 @@
       }
     }
     &-other {
-      background: white;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      background: $white-cl;
       position: absolute;
-      right: 30px;
+      right: 0;
       top: 60px;
-      @include size(80px);
-      text-align: right;
-      padding-right: 15px;
+      @include size(60px);
+      text-align: center;
       height: auto;
       line-height: 30px;
-      @include visible();
-      &.is-active {
+      @include visible(0);
+      font-weight: bold;
+    }
+    &.is-active {
+      .header__lang-current {
+        span {
+          color: $yellow-cl;
+        }
+      }
+      .header__lang-other {
         @include visible(1);
+        span {
+          &:hover {
+            color: $yellow-cl;
+          }
+        }
       }
     }
   }
   .hambuger {
     display: none;
   }
-
   @include md() {
+    --widthLogo: 150px;
     &__top {
-      --height-header: 50px;
-      &-logo {
-        display: flex;
-        align-items: center;
-        max-width: unset;
-        flex-basis: 90%;
-        img {
-          width: 150px;
-        }
-      }
       &-menu {
         li {
           margin-right: 40px;
         }
       }
     }
+    &__lang {
+      margin-right: 15px;
+    }
   }
-
   @include sm() {
     &__top {
+      --height-header: 50px;
       &-menu {
         display: none;
       }
       .hambuger {
-        height: 0;
+        height: 100%;
         cursor: pointer;
         width: 25px;
         @include mid(true);
@@ -161,7 +184,7 @@
             width: 100%;
             background-color: $white-cl;
             position: absolute;
-            -webkit-transition: all 0.4s ease;
+            // -webkit-transition: all 0.4s ease;
             transition: all 0.4s ease;
           }
           &::after {
@@ -171,23 +194,25 @@
             &::before {
               top: 0;
               transform: rotate(45deg);
-              background: black;
+              background: $white-cl;
             }
             &::after {
               top: 0;
               transform: rotate(135deg);
-              background: black;
+              background: $white-cl;
             }
           }
         }
       }
     }
     &__lang {
-      margin-right: 10px;
       &-current {
         i img {
           width: 15px;
         }
+      }
+      &-other {
+        top: 50px;
       }
     }
   }

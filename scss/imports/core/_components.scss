@@ -1,285 +1,358 @@
 // css img, button, heading, title, input, elements, components...
 img {
-    max-width: 100%;
-    height: auto;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    &.--center {
-        margin: 0 auto;
-        display: block;
-    }
+  max-width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  &.--center {
+    margin: 0 auto;
+    display: block;
+  }
 }
 a {
-    text-decoration: none;
-    @include text(var(--body14-fs), $main-font-b, var(--body14-lh), $white-cl, uppercase);
-    letter-spacing: 0;
-    cursor: pointer;
+  text-decoration: none;
+  @include text(
+    var(--body14-fs),
+    $main-font-b,
+    var(--body14-lh),
+    $white-cl,
+    uppercase
+  );
+  letter-spacing: 0;
+  cursor: pointer;
 }
 
 // colors (tuỳ chỉnh)
 .--white-cl {
-    color: $white-cl;
+  color: $white-cl;
 }
 .--black-cl {
-    color: $black-cl;
+  color: $black-cl;
 }
 .--yellow-cl {
-    color: $yellow-cl;
+  color: $yellow-cl;
 }
 
 // css article (nội dung chi tiết bài viết)
 article {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        // font-family: ib; // font bold
-        display: block;
-    }
-    h1 {
-        font-size: var(--h1-fs);
-        line-height: var(--h1-lh);
-        margin: 0 0 0.67rem 0;
-    }
-    h2 {
-        font-size: var(--h2-fs);
-        line-height: var(--h2-lh);
-        margin: 0 0 0.75rem 0;
-    }
-    h3 {
-        font-size: var(--h3-fs);
-        line-height: var(--h3-lh);
-        margin: 0 0 0.83rem 0;
-    }
-    h4 {
-        font-size: var(--h4-fs);
-        line-height: var(--h4-lh);
-        margin: 0 0 1.12rem 0;
-    }
-    h5 {
-        font-size: var(--h5-fs);
-        line-height: var(--h5-lh);
-        margin: 0 0 1.5rem 0;
-    }
-    h6 {
-        font-size: 0.67rem;
-        margin: 0 0 1.67rem 0;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // font-family: ib; // font bold
+    display: block;
+  }
+  h1 {
+    font-size: var(--h1-fs);
+    line-height: var(--h1-lh);
+    margin: 0 0 0.67rem 0;
+  }
+  h2 {
+    font-size: var(--h2-fs);
+    line-height: var(--h2-lh);
+    margin: 0 0 0.75rem 0;
+  }
+  h3 {
+    font-size: var(--h3-fs);
+    line-height: var(--h3-lh);
+    margin: 0 0 0.83rem 0;
+  }
+  h4 {
+    font-size: var(--h4-fs);
+    line-height: var(--h4-lh);
+    margin: 0 0 1.12rem 0;
+  }
+  h5 {
+    font-size: var(--h5-fs);
+    line-height: var(--h5-lh);
+    margin: 0 0 1.5rem 0;
+  }
+  h6 {
+    font-size: 0.67rem;
+    margin: 0 0 1.67rem 0;
+  }
 
-    p {
-        margin: 0 0 1.12rem 0;
+  p {
+    margin: 0 0 1.12rem 0;
+  }
+  ol,
+  ul {
+    list-style: initial;
+    padding-left: 18px;
+  }
+  img {
+    display: inline-block;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 25px auto;
+  }
+  .video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin: 25px auto;
+    iframe,
+    video {
+      position: absolute;
+      @include size(100%);
+      top: 0;
+      left: 0;
     }
-    // strong {
-    //     // font-family: ib; // font bold
-    // }
-    ol,
-    ul {
-        list-style: initial;
-        padding-left: 18px;
-    }
+  }
+  @include xs {
     img {
-        display: inline-block;
-        height: auto;
-        overflow: hidden;
-        border-radius: 10px;
-        margin: 25px auto;
+      margin: 20px auto;
     }
-    .video {
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-        position: relative;
-        margin: 25px auto;
-        iframe,
-        video {
-            position: absolute;
-            @include size(100%);
-            top: 0;
-            left: 0;
-        }
-    }
-    @include xs {
-        img {
-            margin: 20px auto;
-        }
-    }
+  }
 }
 
 .heading {
-    font-family: ib;
-    &.--h1 {
-        font-size: var(--h1-fs);
-        line-height: var(--h1-lh);
-    }
-    &.--h2 {
-        @include text(var(--h2-fs), $main-font-b, var(--h2-lh), $yellow-cl, uppercase);
-        margin-bottom: 3.5rem;
-        letter-spacing: 0.05em;
-    }
+  font-family: ib;
+  &.--h1 {
+    font-size: var(--h1-fs);
+    line-height: var(--h1-lh);
+  }
+  &.--h2 {
+    @include text(
+      var(--h2-fs),
+      $main-font-b,
+      var(--h2-lh),
+      $yellow-cl,
+      uppercase
+    );
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.05em;
+  }
+  &.--h3 {
+    text-transform: uppercase;
+    font-family: $main-font-b;
+    letter-spacing: 0.07em;
+  }
+  @include xs() {
     &.--h3 {
-        text-transform: uppercase;
-        font-family: $main-font-b;
-        letter-spacing: 0.07em;
+      line-height: var(--h3-lh);
     }
-    @include xs() {
-        &.--h3 {
-            line-height: var(--h3-lh);
-        }
-    }
+  }
 }
 
 p {
-    color: $gray-cl;
+  color: $gray-cl;
 }
 
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $white-cl;
-    @include transition($t);
-    span {
-        letter-spacing: var(--body14-ls);
-    }
-    &:hover {
-        background-color: $yellow-cl;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $white-cl;
+  @include transition($t);
+  span {
+    letter-spacing: var(--body14-ls);
+  }
+  &:hover {
+    background-color: $yellow-cl;
+  }
 }
 
 .btn-more {
-    display: inline-flex;
+  display: inline-flex;
+  position: relative;
+  a {
+    letter-spacing: 2px;
+  }
+  img {
+    margin-left: 10px;
     position: relative;
-    a {
-        letter-spacing: 2px;
+    @include transition($t);
+    @include transform(translateX(0));
+  }
+  &:before {
+    content: "";
+    @include size(35px, 2px);
+    background-color: $yellow-cl;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+  }
+  @include transition($t);
+  &:hover {
+    @include transition($t);
+    span {
+      opacity: 0.5;
+      @include transition($t);
     }
     img {
-        margin-left: 10px;
-        position: relative;
-        @include transition($t);
-        @include transform(translateX(0));
+      @include transform(translateX(8px));
+      @include transition($t);
     }
-    &:before {
-        content: "";
-        @include size(35px, 2px);
-        background-color: $yellow-cl;
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-    }
-    @include transition($t);
-    &:hover {
-        @include transition($t);
-        span {
-            opacity: 0.5;
-            @include transition($t);
-        }
-        img {
-            @include transform(translateX(8px));
-            @include transition($t);
-        }
-    }
+  }
 }
 
 .textbox {
-    --pLeft: 100px;
-    --pRight: 100px;
-    padding-left: var(--pLeft);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  --pLeft: 100px;
+  --pRight: 100px;
+  padding-left: var(--pLeft);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .title-text {
+    @include text(
+      var(--title-h2-fs),
+      $main-font-b,
+      normal,
+      $text-cl,
+      uppercase
+    );
+    letter-spacing: var(--title-h2-ls);
+    display: inline-flex;
+    align-items: center;
+    &.--yellow-cl {
+      color: $yellow-cl;
+    }
+    &.--white-cl {
+      color: $white-cl;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      @include size(80px, 1px);
+      background-color: $gray-light-cl;
+      margin-left: -80px;
+      left: -20px;
+      position: relative;
+    }
+  }
+  &.--line-none {
+    padding-left: 0;
     .title-text {
-        @include text(var(--title-h2-fs), $main-font-b, normal, $text-cl, uppercase);
-        letter-spacing: var(--title-h2-ls);
-        display: inline-flex;
-        align-items: center;
-        &.--yellow-cl {
-            color: $yellow-cl;
-        }
-        &.--white-cl {
-            color: $white-cl;
-        }
-        &:before {
-            content: "";
-            display: inline-block;
-            @include size(80px, 2px);
-            background-color: $gray-light-cl;
-            margin-left: -80px;
-            left: -20px;
-            position: relative;
-        }
+      &:before {
+        display: none;
+      }
     }
-    &.--line-none {
-        padding-left: 0;
-        .title-text {
-            &:before {
-                display: none;
-            }
-        }
-    }
+  }
 
-    .info {
-        padding: 10px 0 28px;
+  .info {
+    padding: 10px 0 28px;
+  }
+  &.--text-r {
+    align-items: flex-end;
+    text-align: right;
+    padding-left: 0;
+    padding-right: var(--pRight);
+    .title-text {
+      flex-direction: row-reverse;
+      &:before {
+        margin-left: unset;
+        left: unset;
+        margin-right: -80px;
+        right: -20px;
+      }
     }
-    &.--text-r {
-        align-items: flex-end;
-        text-align: right;
-        padding-left: 0;
-        padding-right: var(--pRight);
-        .title-text {
-            flex-direction: row-reverse;
-            &:before {
-                margin-left: unset;
-                left: unset;
-                margin-right: -80px;
-                right: -20px;
-            }
-        }
-    }
-    &.--text-c {
-        --pLeft: 0;
-        display: block;
+  }
+  &.--text-c {
+    --pLeft: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    .title-text {
+      flex-direction: column-reverse;
+      &:before {
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
-        .title-text {
-            flex-direction: column-reverse;
-            &:before {
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                background-color: $yellow-cl;
-                width: 40px;
-                margin: 15px auto 20px;
-            }
-        }
+        left: 0;
+        background-color: $yellow-cl;
+        width: 35px;
+        height: 3px;
+        margin: 10px auto 20px;
+      }
     }
-    @include sm {
-        --pLeft: 0;
-        --pRight: 0;
-        &:not(.--text-c) {
-            .title-text {
-                &:before {
-                    display: none;
-                }
-            }
+  }
+  @include sm {
+    --pLeft: 0;
+    --pRight: 0;
+    &:not(.--text-c) {
+      .title-text {
+        &:before {
+          display: none;
         }
+      }
     }
-    @include xs {
-        .info {
-            max-width: 480px;
-            padding: 5px 0 18px;
-        }
-        &.--text-r {
-            text-align: right;
-            .title-text {
-                flex-direction: unset;
-            }
-        }
+  }
+  @include xs {
+    .info {
+      max-width: 480px;
+      padding: 5px 0 18px;
     }
+    &.--text-r {
+      text-align: right;
+      .title-text {
+        flex-direction: unset;
+      }
+    }
+  }
+}
+
+#toTop {
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  @include size(50px);
+  background: $yellow-cl;
+  border-radius: 50%;
+  @include visible(0);
+  @include transition($t);
+  @include transform(translateY(0));
+  cursor: pointer;
+  mix-blend-mode: difference;
+  &.is-active {
+    @include visible(1);
+    @include transition($t);
+  }
+  &:hover {
+    @include transition($t);
+    @include transform(translateY(-10px));
+  }
+}
+
+.arrow-origin {
+  @include transition($t);
+  &:after {
+    --line-width: 15px;
+    content: "";
+    @include size(var(--line-width));
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+  &.--top:after {
+    transform: translate(-50%, calc(-50%)) rotate(45deg);
+    border-color: $white-cl;
+    left: 50%;
+    top: calc(50% + var(--line-width) / 4);
+  }
+  &.--right{
+    &:after {
+      transform: translate(-50%, calc(-50%)) rotate(135deg);
+      @include transition($t);
+      border-color: $black-cl;
+      @include size(10px);
+      right: 10px;
+      top: 50%
+    }
+    &.is-active:after{
+      @include transition($t);
+      transform: translate(-50%, calc(-50%)) rotate(225deg);
+    }
+  }
 }
